@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="40dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColorHint="@color/mySecondColor"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_nip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIP"
+            android:textColorHint="@color/mySecondColor"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Status"
+            android:textColorHint="@color/mySecondColor"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:textColorHint="@color/mySecondColor"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="@color/mySecondColor"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_division"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Divisi"
+            android:textColorHint="@color/mySecondColor"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="@color/mySecondColor"
+            android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

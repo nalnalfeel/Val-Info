@@ -21,7 +21,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,8 +53,9 @@ public class ProfileFragment extends Fragment {
         TextView tv_status = parent.findViewById(R.id.fp_text_status);
         TextView tv_nip = parent.findViewById(R.id.fp_text_nip_profile);
         TextView tutorialTextView = parent.findViewById(R.id.fp_text_tutorial);
+        TextView changePasswordTextView = parent.findViewById(R.id.fp_text_changePassword); // Ensure this is correctly referenced
 
-        if(!mPref.ADMIN) {
+        if (!mPref.ADMIN) {
             tv_fullname.setText(mPref.USER);
             tv_email.setText(mPref.EMAIL);
             tv_division.setText(mPref.DIVISI == 1 ? "DBS" : "Maybank");
@@ -95,6 +95,15 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        changePasswordTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), RegisterFragment.class);
+                intent.putExtra("ACTION", "CHANGE_PASSWORD");
+                startActivity(intent);
+            }
+        });
+
         parent.findViewById(R.id.fp_text_contact).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +122,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        parent.findViewById(R.id.fp_text_changePassword).setOnClickListener(new View.OnClickListener() {
+        parent.findViewById(R.id.fp_text_changeData).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendRequest(parent.getContext());
@@ -146,8 +155,8 @@ public class ProfileFragment extends Fragment {
                     txt.append("Change user\n");
                 if (((CheckBox) dial.findViewById(R.id.rd_email)).isChecked())
                     txt.append("Change email\n");
-                if (((CheckBox) dial.findViewById(R.id.rd_password)).isChecked())
-                    txt.append("Change password\n");
+                /*if (((CheckBox) dial.findViewById(R.id.rd_password)).isChecked())
+                    txt.append("Change password\n");*/
                 if (((CheckBox) dial.findViewById(R.id.rd_divisi)).isChecked())
                     txt.append("Change divisi\n");
                 if (((CheckBox) dial.findViewById(R.id.rd_mitra)).isChecked())
@@ -201,3 +210,4 @@ public class ProfileFragment extends Fragment {
         return c.getResources().getDisplayMetrics().widthPixels;
     }
 }
+

@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/profile_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -206,11 +207,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="Tutorial"
+                    android:text="Guide"
                     android:textColor="@color/black"
                     android:drawableStart="@drawable/ic_tutorial"
                     android:drawablePadding="5dp"
                     android:layout_marginBottom="10dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000"
+                    android:layout_marginBottom="25dp" />
+
+                <TextView
+                    android:id="@+id/fp_text_changeData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="Change Data"
+                    android:drawableStart="@drawable/ic_change_password"
+                    android:drawablePadding="5dp"
+                    android:layout_marginBottom="5dp" />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -223,8 +240,8 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:textColor="@color/black"
-                    android:text="Change Data"
-                    android:drawableStart="@drawable/ic_change_password"
+                    android:text="Change Password"
+                    android:drawableStart="@drawable/ic_move_pwd"
                     android:drawablePadding="5dp"
                     android:layout_marginBottom="5dp" />
 

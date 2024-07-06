@@ -101,15 +101,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <CheckBox
-                        android:id="@+id/rememberMeChecklist"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Remember me"
-                        android:textColor="@color/black"
-                        android:layout_centerVertical="true"
-                        android:alpha="0.7"
-                        android:layout_marginBottom="10dp"/>
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"/>
 
                 </RelativeLayout>
 
